@@ -16,9 +16,24 @@ soup = BeautifulSoup(res.text, "lxml")
 # print(soup.find(attrs={"class":"Nbtn_upload"})) # class="Nbtn_upload"인 어떤 element를 찾아줘
 
 # print(soup.find("li", attrs={"class":"rank01"}))
-rank1 = soup.find("li", attrs={"class":"rank01"})
+# rank1 = soup.find("li", attrs={"class":"rank01"})
 # print(rank1.a.get_text())
 # print(rank1.next_sibling)
-rank2 = rank1.next_sibling.next_sibling
-rank3 = rank2.next_sibling.next_sibling
-print(rank3.a.get_text())
+# rank2 = rank1.next_sibling.next_sibling
+# rank3 = rank2.next_sibling.next_sibling
+# print(rank3.a.get_text())
+# rank2 = rank3.previous_sibling.previous_sibling
+# print(rank2.a.get_text())
+# print(rank1.parent)
+# rank2 = rank1.find_next_sibling("li")
+# print(rank2.a.get_text())
+# rank3 = rank2.find_next_sibling("li")
+# print(rank3.a.get_text())
+# rank2 = rank3.find_previous_sibling("li")
+# print(rank2.a.get_text())
+
+# print(rank1.find_next_siblings("li"))
+
+webtoon = soup.find("a", text="욕망일기-EP2. 통화중(2)_ 내가 반말했었나?")
+print(webtoon)
+
